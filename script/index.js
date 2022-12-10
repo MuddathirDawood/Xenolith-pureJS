@@ -26,14 +26,14 @@ localStorage.setItem('games',JSON.stringify(games))
 
 let section = document.querySelector('.prods')
 function displayData(array){
-    array.forEach((item)=> {
+    array.forEach((item, index)=> {
         section.innerHTML += `
         <div class="card">
             <img src="${item.cover}" class="card-img-top" alt="Cover">
             <div class="card-body">
               <h5 class="card-title">${item.title}</h5>
               <p class="card-text">R${item.price}</p>
-              <a href="#" class="btn btn-primary">Add To Checkout</a>
+              <a href="../checkout.html" class="btn btn-primary" onclick="addCheckout(${index})">Add To Checkout</a>
             </div>
         </div>
         `
@@ -56,3 +56,9 @@ filter.addEventListener('change', (e) => {
         displayData(filteredArr)
     }
 })
+
+let checkoutGames = JSON.parse(localStorage.getItem('checkoutGames'))
+function addCheckout(index){
+    checkoutGames.push(games[index])
+    localStorage.setItem('checkoutGames', JSON.stringify(checkoutGames))
+}

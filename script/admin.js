@@ -11,8 +11,8 @@ function displayData(){
         <td class="table__content" data-heading="Platform">${item.platform}</td>
         <td class="table__content" data-heading="Cover"><img id="coverImg" src="${item.cover}" alt="Cover"></td>
         <td class="table__content" data-heading="Options">
-        <button onclick="editGame(${index})"  data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-        <button onclick="deleteGame(${index})">Delete</button>
+        <button onclick="editGame(${index})"  data-bs-toggle="modal" data-bs-target="#editModal"><span class="mdi mdi-pencil"></span></button>
+        <button onclick="deleteGame(${index})"><span class="mdi mdi-delete"></span></button>
         </td>
         </tr>
         `
@@ -55,7 +55,6 @@ function editGame(index){
 }
 
 function edit(){
-    console.log(gameID);
     let id = gameID
     let title = document.querySelector('.etitle').value
     let platform = document.querySelector('.eplatform').value

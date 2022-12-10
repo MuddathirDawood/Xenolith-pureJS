@@ -99,6 +99,15 @@ display: none;
 
 .modal-content .modal-footer button{
   border-radius: 0;
+  width: 125px;
+}
+
+.modal-footer button:first-child{
+  background-color: #E2142D;
+}
+
+.modal-footer button:nth-child(2){
+  background-color: #0021c6;
 }
 
 .modal-body{
@@ -108,7 +117,7 @@ display: none;
   flex-direction: column;
 }
 
-/* Form */
+/* ---------------------------------------- MODAL FORM ------------------------------------------- */
 .group {
   position: relative;
   margin: 15px;
@@ -118,7 +127,7 @@ display: none;
   font-size: 16px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 200px;
+  width: 300px;
   border: none;
   border-bottom: 1px solid #515151;
   background: transparent;
@@ -150,7 +159,7 @@ display: none;
  .bar {
   position: relative;
   display: block;
-  width: 200px;
+  width: 300px;
  }
  
  .bar:before, .bar:after {
@@ -200,4 +209,18 @@ display: none;
    width: 0;
    background: transparent;
   }
+ }
+
+ .table__content button{
+  background: transparent;
+  border: none;
+ }
+
+ .table__content button span{
+  color: #0021c6;
+  font-size: 26px;
+  cursor: pointer;
+ }
+ .table__content button:nth-child(2) span{
+  color: #E2142D;
  }
