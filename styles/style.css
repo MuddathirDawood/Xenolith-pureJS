@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+@font-face{
+    font-family: Xenolith;
+    src: url('../assets/fonts/aristotelica.text-trial-demibold.ttf');
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #8C8C8E;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0021c6;
+  }
+
+/* ---------------------------------------- NAVBAR ------------------------------------------- */
+header{
+    height: 75px;
+    background: rgb(235, 235, 235);
+    font-family: Xenolith;
+    font-size: 18px;
+}
+
+ul .active{
+    color: #E2142D;
+}
+
+
+/* ---------------------------------------- LANDING ------------------------------------------- */
+.landing{
+    background: url('../assets/Background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Xenolith;
+}
+
+.landing h4{
+    text-transform: uppercase;
+    font-family: Xenolith;
+}
+
+/* ---------------------------------------- FILTER ------------------------------------------- */
+.products{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.filter{
+    background: #E2142D;
+    align-self: center;
+}
+
+
+/* ---------------------------------------- PRODUCTS ------------------------------------------- */
+main{
+    min-height: 100vh;
+}
+
+.prods{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.prods .card{
+    width: 325px;
+}
+
+.prods .card .card-body{
+    height: 100px;
+}
+
+.prods .card img{
+    height: 75%;
+}
+
+.prods .card a{
+    border-radius: 0 !important;
+    background: #E2142D;
+}
+
+.card-body{
+height: 10vh !important;
+}
+
+/* ---------------------------------------- FOOTER ------------------------------------------- */
+
+footer{
+    min-width: 98vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    background: #0021c6;
+    margin-top: 50px;
+}

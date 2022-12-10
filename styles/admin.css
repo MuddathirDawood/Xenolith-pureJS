@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: Xenolith;
+    src: url('../assets/fonts/aristotelica.text-trial-demibold.ttf');
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #8C8C8E;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0021c6;
+  }
+
+/* ---------------------------------------- NAVBAR ------------------------------------------- */
+
+header{
+    height: 75px;
+    background: rgb(235, 235, 235);
+    font-family: Xenolith;
+    font-size: 18px;
+}
+
+ul .active{
+    color: #E2142D;
+}
+
+/* ---------------------------------------- TABLE ------------------------------------------- */
+td, th { padding: 8px; padding: .5rem;
+}
+
+th {
+  text-align: left;
+  font-weight: 300;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: Xenolith;
+}
+
+.add{
+  color: #E2142D;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.table {
+  width: 100%;
+  padding: 16px;
+  padding: 1rem;
+}
+
+.table__content img{
+  width: 100px !important;
+}
+
+.table__heading { border-bottom: 2px solid #0021c6; }
+ @media (max-width: 32rem) {
+ .table__heading {
+display: none;
+}
+ .table__content {
+ display: block;
+ padding: .5rem 0;
+}
+ .table__row {
+ margin: .25rem 1rem;
+ padding: .5rem 0;
+ display: block;
+ border-bottom: 2px solid #0021c6;
+}
+
+ .table__content:before {
+ content: attr(data-heading);
+ display: inline-block;
+ width: 5rem;
+ margin-right: .5rem;
+ color: #999;
+ font-size: .75rem;
+ font-weight: 700;
+ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+}
+}
+
+/* ---------------------------------------- MODAL ------------------------------------------- */
+.modal-content{
+  border-radius: 0;
+}
+
+.modal-content .modal-footer button{
+  border-radius: 0;
+}
+
+.modal-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Form */
+.group {
+  position: relative;
+  margin: 15px;
+ }
+ 
+ .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+ }
+ 
+ .input:focus {
+  outline: none;
+ }
+ 
+ label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+ 
+ .input:focus ~ label, .input:valid ~ label {
+  top: -10px;
+  font-size: 14px;
+  color: #E2142D;
+ }
+ 
+ .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+ }
+ 
+ .bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #0021c6;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+ 
+ .bar:before {
+  left: 50%;
+ }
+ 
+ .bar:after {
+  right: 50%;
+ }
+ 
+ .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+  width: 50%;
+ }
+ 
+ .highlight {
+  position: absolute;
+  height: 50%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+ }
+ 
+ .input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+ }
+ 
+ @keyframes inputHighlighter {
+  from {
+   background: #0021c6;
+  }
+ 
+  to {
+   width: 0;
+   background: transparent;
+  }
+ }
